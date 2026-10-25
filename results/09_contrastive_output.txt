@@ -1,0 +1,105 @@
+
+Training bag (learned weights) on 5820 fit pairs (validation: 1455 pairs)
+/mnt/attach/project-files/em-experiment/pilot/09_contrastive_encoder.py:142: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  total += float(loss) * len(idx)
+  bag (learned weights) epoch  1  loss 4.180  val m at u=1% 0.399  val percentile 0.928
+  bag (learned weights) epoch  2  loss 3.753  val m at u=1% 0.464  val percentile 0.941
+  bag (learned weights) epoch  3  loss 3.263  val m at u=1% 0.529  val percentile 0.952
+  bag (learned weights) epoch  4  loss 2.752  val m at u=1% 0.595  val percentile 0.961
+  bag (learned weights) epoch  5  loss 2.228  val m at u=1% 0.618  val percentile 0.965
+  bag (learned weights) epoch  6  loss 1.866  val m at u=1% 0.646  val percentile 0.968
+  bag (learned weights) epoch  7  loss 1.269  val m at u=1% 0.660  val percentile 0.968
+  bag (learned weights) epoch  8  loss 1.078  val m at u=1% 0.671  val percentile 0.968
+  bag (learned weights) epoch  9  loss 0.849  val m at u=1% 0.676  val percentile 0.967
+  bag (learned weights) epoch 10  loss 0.725  val m at u=1% 0.669  val percentile 0.966
+  bag (learned weights) epoch 11  loss 0.692  val m at u=1% 0.660  val percentile 0.965
+  bag (learned weights) epoch 12  loss 0.516  val m at u=1% 0.678  val percentile 0.965
+  bag (learned weights) epoch 13  loss 0.483  val m at u=1% 0.676  val percentile 0.964
+  bag (learned weights) epoch 14  loss 0.419  val m at u=1% 0.666  val percentile 0.963
+  bag (learned weights) epoch 15  loss 0.371  val m at u=1% 0.665  val percentile 0.962
+  bag (learned weights) epoch 16  loss 0.348  val m at u=1% 0.668  val percentile 0.962
+  bag (learned weights) epoch 17  loss 0.296  val m at u=1% 0.656  val percentile 0.963
+  bag (learned weights): best val m at u=1% 0.678, percentile 0.965
+
+Training set transformer on 5820 fit pairs (validation: 1455 pairs)
+  set transformer epoch  1  loss 4.102  val m at u=1% 0.419  val percentile 0.941
+  set transformer epoch  2  loss 3.227  val m at u=1% 0.548  val percentile 0.960
+  set transformer epoch  3  loss 2.656  val m at u=1% 0.570  val percentile 0.959
+  set transformer epoch  4  loss 2.140  val m at u=1% 0.620  val percentile 0.965
+  set transformer epoch  5  loss 1.868  val m at u=1% 0.598  val percentile 0.961
+  set transformer epoch  6  loss 1.717  val m at u=1% 0.570  val percentile 0.956
+  set transformer epoch  7  loss 1.245  val m at u=1% 0.613  val percentile 0.962
+  set transformer epoch  8  loss 1.165  val m at u=1% 0.614  val percentile 0.962
+  set transformer epoch  9  loss 0.996  val m at u=1% 0.586  val percentile 0.959
+  set transformer: best val m at u=1% 0.620, percentile 0.965
+
+Test: 5000 pairs, 739 with no shared exact dx code.
+
+All test pairs (n = 5000):
+  exact dx IDF cosine        mean percentile 0.841   top-1 0.385   top-50 0.726   m at u=10%: 0.803 (m/u 8.0)   m at u=1%: 0.683 (m/u 68.3)
+  GloVe mean, IDF-weighted   mean percentile 0.901   top-1 0.057   top-50 0.353   m at u=10%: 0.660 (m/u 6.6)   m at u=1%: 0.286 (m/u 28.6)
+  GloVe mean, unweighted     mean percentile 0.907   top-1 0.060   top-50 0.364   m at u=10%: 0.637 (m/u 6.4)   m at u=1%: 0.264 (m/u 26.4)
+  contrastive bag (learned w mean percentile 0.963   top-1 0.204   top-50 0.672   m at u=10%: 0.892 (m/u 8.9)   m at u=1%: 0.643 (m/u 64.3)
+  contrastive set transforme mean percentile 0.961   top-1 0.137   top-50 0.614   m at u=10%: 0.875 (m/u 8.7)   m at u=1%: 0.586 (m/u 58.6)
+
+True pairs with NO shared exact dx code (n = 739):
+  exact dx IDF cosine        mean percentile 0.000   top-1 0.000   top-50 0.000   m at u=10%: 0.000 (m/u 0.0)   m at u=1%: 0.000 (m/u 0.0)
+  GloVe mean, IDF-weighted   mean percentile 0.789   top-1 0.003   top-50 0.104   m at u=10%: 0.376 (m/u 3.8)   m at u=1%: 0.073 (m/u 7.3)
+  GloVe mean, unweighted     mean percentile 0.791   top-1 0.000   top-50 0.095   m at u=10%: 0.336 (m/u 3.4)   m at u=1%: 0.053 (m/u 5.3)
+  contrastive bag (learned w mean percentile 0.870   top-1 0.014   top-50 0.257   m at u=10%: 0.651 (m/u 6.5)   m at u=1%: 0.263 (m/u 26.3)
+  contrastive set transforme mean percentile 0.888   top-1 0.008   top-50 0.227   m at u=10%: 0.640 (m/u 6.4)   m at u=1%: 0.227 (m/u 22.7)
+
+True partner scored above the most exact-code-similar wrong patient (all test pairs / no shared exact code):
+  exact dx IDF cosine                0.385 / 0.000
+  GloVe mean, IDF-weighted           0.507 / 0.246
+  GloVe mean, unweighted             0.534 / 0.263
+  contrastive bag (learned weights)  0.677 / 0.355
+  contrastive set transformer        0.752 / 0.501
+
+Learned code weight vs IDF (codes in >= 10 fit patients, n = 3409): Spearman 0.970
+Per-code FS agreement weight log(m/u) (codes on side A of >= 1 fit patient, n = 3408): Spearman with learned weight 0.819, with IDF 0.765; m (recurrence on the index admission) has Spearman -0.169 with IDF
+
+Most frequent codes:
+ patients   idf  weight  weight / idf  log m/u                                                    code
+     3145 2.039   1.123         0.551    0.520           dx9_4019 (Unspecified essential hypertension)
+     2267 2.355   1.213         0.515    0.821         dx9_2724 (Other and unspecified hyperlipidemia)
+     1867 2.434   1.233         0.507    1.007                 dx10_E785 (Hyperlipidemia, unspecified)
+     1837 2.657   1.244         0.468    0.689            dx9_5849 (Acute kidney failure, unspecified)
+     1828 2.520   1.270         0.504    0.937             dx10_I10 (Essential (primary) hypertension)
+     1676 2.837   1.291         0.455    0.516                          dx9_2859 (Anemia, unspecified)
+     1628 2.745   1.310         0.477    1.059                           dx9_53081 (Esophageal reflux)
+     1615 2.716   1.273         0.469    0.938           dx10_N179 (Acute kidney failure, unspecified)
+     1543 2.788   1.389         0.498    1.202 dx9_25000 (Diabetes mellitus without mention of complic
+     1530 2.782   1.314         0.472    1.080             dx9_V1582 (Personal history of tobacco use)
+     1477 2.640   1.284         0.486    1.264   dx10_Z87891 (Personal history of nicotine dependence)
+     1447 2.780   1.332         0.479    1.230        dx9_4280 (Congestive heart failure, unspecified)
+     1380 3.003   1.340         0.446    0.829  dx9_5990 (Urinary tract infection, site not specified)
+     1336 2.921   1.372         0.470    1.266 dx9_41401 (Coronary atherosclerosis of native coronary 
+     1315 2.853   1.377         0.483    1.353                         dx9_42731 (Atrial fibrillation)
+
+Up-weighted most relative to IDF:
+ patients   idf  weight  weight / idf  log m/u                                                    code
+     3145 2.039   1.123         0.551    0.520           dx9_4019 (Unspecified essential hypertension)
+     2267 2.355   1.213         0.515    0.821         dx9_2724 (Other and unspecified hyperlipidemia)
+     1867 2.434   1.233         0.507    1.007                 dx10_E785 (Hyperlipidemia, unspecified)
+     1828 2.520   1.270         0.504    0.937             dx10_I10 (Essential (primary) hypertension)
+     1543 2.788   1.389         0.498    1.202 dx9_25000 (Diabetes mellitus without mention of complic
+     1477 2.640   1.284         0.486    1.264   dx10_Z87891 (Personal history of nicotine dependence)
+     1315 2.853   1.377         0.483    1.353                         dx9_42731 (Atrial fibrillation)
+     1447 2.780   1.332         0.479    1.230        dx9_4280 (Congestive heart failure, unspecified)
+     1120 2.925   1.398         0.478    1.532 dx10_I2510 (Atherosclerotic heart disease of native cor
+     1628 2.745   1.310         0.477    1.059                           dx9_53081 (Esophageal reflux)
+
+Down-weighted most relative to IDF:
+ patients   idf  weight  weight / idf  log m/u                                                    code
+       10 8.188   2.160         0.264    5.268 dx9_57491 (Calculus of gallbladder and bile duct withou
+       10 8.188   2.178         0.266    4.526                                dx10_K621 (Rectal polyp)
+       11 8.101   2.162         0.267    5.173 dx9_5409 (Acute appendicitis without mention of periton
+       10 8.101   2.165         0.267    4.526 dx9_80507 (Closed fracture of seventh cervical vertebra
+       10 8.101   2.171         0.268    4.575 dx10_K8031 (Calculus of bile duct with cholangitis, uns
+       10 8.188   2.199         0.269    4.863              dx9_71694 (Arthropathy, unspecified, hand)
+       10 8.101   2.176         0.269    4.495                      dx10_N433 (Hydrocele, unspecified)
+       10 8.188   2.200         0.269    4.526  dx10_I7411 (Embolism and thrombosis of thoracic aorta)
+       10 8.101   2.177         0.269    6.271 dx10_R0989 (Other specified symptoms and signs involvin
+       10 8.188   2.201         0.269    4.495 dx10_S0232XA (Fracture of orbital floor, left side, ini

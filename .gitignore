@@ -1,0 +1,12 @@
+# Credentialed PhysioNet data - must never be committed (DUA)
+mimiciv/
+mimic-iv-ed-2.2/
+# Derived data / caches
+data/
+*.parquet
+*.duckdb
+*.duckdb.wal
+hf_cache/
+.venv/
+__pycache__/
+.ipynb_checkpoints/

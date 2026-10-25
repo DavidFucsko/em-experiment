@@ -1,0 +1,49 @@
+[project]
+name = "em-experiment"
+version = "0.1.0"
+description = "Demographic + clinical (MIMIC-IV) entity matching experiment"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # data layer
+    "duckdb>=1.1",
+    "pyarrow>=17",
+    "polars>=1.0",
+    "pandas>=2.2",
+    "numpy>=2.0",
+    # ClinicalBERT embeddings
+    "torch>=2.7",
+    "transformers>=4.45",
+    "safetensors",
+    "tqdm",
+    # record linkage / comparison
+    "recordlinkage>=0.16",   # FEBRL 4A/4B datasets (pilot); ECMClassifier, compared in plan
+    "rapidfuzz>=3.9",        # Jaro-Winkler, Levenshtein
+    "scikit-learn>=1.5",     # RF, LogReg, calibration
+    "scipy",
+    "statsmodels",           # McNemar
+    # analysis
+    "matplotlib",
+    "seaborn",
+    "ipykernel",
+    "jupyterlab",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["src/test"]
+python_files = ["test_*.py"]

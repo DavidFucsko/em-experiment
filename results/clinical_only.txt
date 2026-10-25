@@ -1,0 +1,23 @@
+12,275 patients; no demographic field is used for scoring
+
+codes        prefilter      true pair passes candidates |  top-1  top-5 (all patients) |  top-1  top-5 (among passing)
+diagnoses    none                      1.000      12275 |  0.328  0.482                  |  0.328  0.482
+diagnoses    gender                    1.000       6153 |  0.370  0.526                  |  0.370  0.526
+diagnoses    gender + race             0.955       2690 |  0.458  0.604                  |  0.480  0.632
+diagnoses    MedLink-style             0.870        435 |  0.556  0.677                  |  0.639  0.778
+medications  none                      1.000      12275 |  0.342  0.399                  |  0.342  0.399
+medications  gender                    1.000       6153 |  0.360  0.417                  |  0.360  0.417
+medications  gender + race             0.955       2690 |  0.397  0.465                  |  0.416  0.487
+medications  MedLink-style             0.870        435 |  0.450  0.531                  |  0.517  0.610
+procedures   none                      1.000      12275 |  0.007  0.017                  |  0.007  0.017
+procedures   gender                    1.000       6153 |  0.010  0.025                  |  0.010  0.025
+procedures   gender + race             0.955       2690 |  0.030  0.073                  |  0.032  0.077
+procedures   MedLink-style             0.870        435 |  0.105  0.204                  |  0.121  0.235
+other        none                      1.000      12275 |  0.003  0.010                  |  0.003  0.010
+other        gender                    1.000       6153 |  0.005  0.017                  |  0.005  0.017
+other        gender + race             0.955       2690 |  0.027  0.077                  |  0.028  0.081
+other        MedLink-style             0.870        435 |  0.119  0.236                  |  0.136  0.271
+all          none                      1.000      12275 |  0.437  0.552                  |  0.437  0.552
+all          gender                    1.000       6153 |  0.469  0.590                  |  0.469  0.590
+all          gender + race             0.955       2690 |  0.533  0.657                  |  0.558  0.687
+all          MedLink-style             0.870        435 |  0.607  0.711                  |  0.697  0.817

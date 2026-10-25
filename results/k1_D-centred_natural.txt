@@ -1,0 +1,10 @@
+
+cohort k1, natural full, model D-centred: 12,275 patients | 1,018,942 candidate pairs, true pairs covered 99.99% | top-1 accuracy 0.997 | |A2| 0 | recall at 99 % precision 0.992
+             P      R     F1 | F1 with 0 / 1 / 2 / 3 / 4 / 5+ changed fields (records: 9639 / 1019 / 440 / 505 / 522 / 150)
+E2       0.994  0.990  0.992 | 0.997 / 0.997 / 0.989 / 0.984 / 0.963 / 0.739
+E2+P3    1.000  0.990  0.995 | 1.000 / 0.999 / 0.990 / 0.984 / 0.967 / 0.739
+
+cohort k1, natural no_names, model D-centred: 12,275 patients | 1,326,751 candidate pairs, true pairs covered 96.57% | top-1 accuracy 0.650 | |A2| 1,323,529 | recall at 99 % precision 0.000
+             P      R     F1 | F1 with 0 / 1 / 2 / 3 / 4 / 5+ changed fields (records: 9639 / 1019 / 440 / 505 / 522 / 150)
+E2       0.739  0.868  0.798 | 0.847 / 0.844 / 0.699 / 0.145 / 0.027 / 0.000
+E2+P3    0.957  0.834  0.891 | 0.950 / 0.938 / 0.763 / 0.164 / 0.030 / 0.000

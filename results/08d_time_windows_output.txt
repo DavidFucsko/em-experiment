@@ -1,0 +1,66 @@
+Training patients' history: median 4 visits per patient; 102,525 distinct visit ids in total.
+glove, context record:
+  epoch  1  loss 0.0766
+  epoch  2  loss 0.0285
+  epoch  3  loss 0.0231
+  epoch  4  loss 0.0204
+  epoch  5  loss 0.0188
+  epoch  6  loss 0.0177
+  epoch  7  loss 0.0169
+  epoch  8  loss 0.0163
+  epoch  9  loss 0.0158
+  epoch 10  loss 0.0154
+  epoch 11  loss 0.0151
+  epoch 12  loss 0.0148
+  epoch 13  loss 0.0145
+  epoch 14  loss 0.0142
+  epoch 15  loss 0.0140
+glove, context visit:
+  68,020 visits, mean 24.7 tokens per visit, 5,583,842 co-occurring pairs
+  epoch  1  loss 0.1382
+  epoch  2  loss 0.0520
+  epoch  3  loss 0.0437
+  epoch  4  loss 0.0383
+  epoch  5  loss 0.0342
+  epoch  6  loss 0.0314
+  epoch  7  loss 0.0292
+  epoch  8  loss 0.0276
+  epoch  9  loss 0.0262
+  epoch 10  loss 0.0252
+  epoch 11  loss 0.0243
+  epoch 12  loss 0.0235
+  epoch 13  loss 0.0228
+  epoch 14  loss 0.0222
+  epoch 15  loss 0.0216
+glove, context 15 days:
+  68,020 visits, mean 24.7 tokens per visit, 7,183,148 co-occurring pairs
+  epoch  1  loss 0.1447
+  epoch  2  loss 0.0642
+  epoch  3  loss 0.0532
+  epoch  4  loss 0.0466
+  epoch  5  loss 0.0425
+  epoch  6  loss 0.0396
+  epoch  7  loss 0.0374
+  epoch  8  loss 0.0357
+  epoch  9  loss 0.0342
+  epoch 10  loss 0.0329
+  epoch 11  loss 0.0318
+  epoch 12  loss 0.0309
+  epoch 13  loss 0.0300
+  epoch 14  loss 0.0292
+  epoch 15  loss 0.0284
+ppmi, context record:
+ppmi, context visit:
+  68,020 visits, mean 24.7 tokens per visit, 5,583,842 co-occurring pairs
+ppmi, context 15 days:
+  68,020 visits, mean 24.7 tokens per visit, 7,183,148 co-occurring pairs
+
+Rows: true pairs with dx on both sides (n = 5000); sharing no exact code (n = 739).
+method  context           no-shared: percentile  m/u at u=1%  all: m at u=1%  10-NN same ICD category
+glove   record (cached)                   0.789          7.3           0.286                    0.057
+glove   record                            0.828         12.9           0.446                    0.081
+glove   visit                             0.521          0.9           0.337                    0.071
+glove   15 days                           0.467          0.1           0.316                    0.068
+ppmi    record                            0.570          0.0           0.312                    0.070
+ppmi    visit                             0.476          0.3           0.332                    0.101
+ppmi    15 days                           0.483          0.3           0.353                    0.106

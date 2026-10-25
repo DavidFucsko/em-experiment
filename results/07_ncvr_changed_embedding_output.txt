@@ -1,0 +1,170 @@
+
+[diagnoses] 7213 codes; training on 5820 fit pairs, 1454 validation pairs
+/mnt/attach/project-files/em-experiment/pilot/09_contrastive_encoder.py:142: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  total += float(loss) * len(idx)
+  diagnoses epoch  1  loss 4.180  val m at u=1% 0.399  val percentile 0.928
+  diagnoses epoch  2  loss 3.753  val m at u=1% 0.464  val percentile 0.941
+  diagnoses epoch  3  loss 3.263  val m at u=1% 0.529  val percentile 0.953
+  diagnoses epoch  4  loss 2.752  val m at u=1% 0.595  val percentile 0.961
+  diagnoses epoch  5  loss 2.228  val m at u=1% 0.618  val percentile 0.965
+  diagnoses epoch  6  loss 1.866  val m at u=1% 0.646  val percentile 0.969
+  diagnoses epoch  7  loss 1.269  val m at u=1% 0.661  val percentile 0.969
+  diagnoses epoch  8  loss 1.078  val m at u=1% 0.671  val percentile 0.968
+  diagnoses epoch  9  loss 0.849  val m at u=1% 0.676  val percentile 0.967
+  diagnoses epoch 10  loss 0.725  val m at u=1% 0.669  val percentile 0.967
+  diagnoses epoch 11  loss 0.692  val m at u=1% 0.660  val percentile 0.966
+  diagnoses epoch 12  loss 0.516  val m at u=1% 0.678  val percentile 0.965
+  diagnoses epoch 13  loss 0.483  val m at u=1% 0.676  val percentile 0.965
+  diagnoses epoch 14  loss 0.419  val m at u=1% 0.666  val percentile 0.963
+  diagnoses epoch 15  loss 0.371  val m at u=1% 0.665  val percentile 0.963
+  diagnoses epoch 16  loss 0.348  val m at u=1% 0.669  val percentile 0.963
+  diagnoses epoch 17  loss 0.296  val m at u=1% 0.656  val percentile 0.963
+  diagnoses: best val m at u=1% 0.678, percentile 0.965
+
+[medications] 3613 codes; training on 4916 fit pairs, 1226 validation pairs
+  medications epoch  1  loss 4.822  val m at u=1% 0.282  val percentile 0.861
+  medications epoch  2  loss 4.536  val m at u=1% 0.315  val percentile 0.878
+  medications epoch  3  loss 4.244  val m at u=1% 0.361  val percentile 0.890
+  medications epoch  4  loss 3.868  val m at u=1% 0.405  val percentile 0.903
+  medications epoch  5  loss 3.548  val m at u=1% 0.426  val percentile 0.902
+  medications epoch  6  loss 3.146  val m at u=1% 0.470  val percentile 0.912
+  medications epoch  7  loss 2.654  val m at u=1% 0.489  val percentile 0.911
+  medications epoch  8  loss 2.327  val m at u=1% 0.491  val percentile 0.910
+  medications epoch  9  loss 2.094  val m at u=1% 0.492  val percentile 0.911
+  medications epoch 10  loss 1.807  val m at u=1% 0.507  val percentile 0.908
+  medications epoch 11  loss 1.508  val m at u=1% 0.508  val percentile 0.908
+  medications epoch 12  loss 1.432  val m at u=1% 0.512  val percentile 0.907
+  medications epoch 13  loss 1.299  val m at u=1% 0.498  val percentile 0.902
+  medications epoch 14  loss 1.251  val m at u=1% 0.495  val percentile 0.899
+  medications epoch 15  loss 1.052  val m at u=1% 0.498  val percentile 0.897
+  medications epoch 16  loss 1.024  val m at u=1% 0.513  val percentile 0.897
+  medications epoch 17  loss 0.990  val m at u=1% 0.503  val percentile 0.892
+  medications epoch 18  loss 0.901  val m at u=1% 0.527  val percentile 0.894
+  medications epoch 19  loss 0.862  val m at u=1% 0.512  val percentile 0.894
+  medications epoch 20  loss 0.808  val m at u=1% 0.522  val percentile 0.891
+  medications epoch 21  loss 0.681  val m at u=1% 0.515  val percentile 0.891
+  medications epoch 22  loss 0.667  val m at u=1% 0.511  val percentile 0.893
+  medications epoch 23  loss 0.570  val m at u=1% 0.513  val percentile 0.889
+  medications: best val m at u=1% 0.527, percentile 0.894
+
+[procedures] 2366 codes; training on 5395 fit pairs, 1318 validation pairs
+  procedures epoch  1  loss 5.698  val m at u=1% 0.038  val percentile 0.662
+  procedures epoch  2  loss 5.440  val m at u=1% 0.050  val percentile 0.686
+  procedures epoch  3  loss 5.332  val m at u=1% 0.058  val percentile 0.703
+  procedures epoch  4  loss 5.243  val m at u=1% 0.070  val percentile 0.713
+  procedures epoch  5  loss 5.159  val m at u=1% 0.073  val percentile 0.717
+  procedures epoch  6  loss 5.069  val m at u=1% 0.071  val percentile 0.718
+  procedures epoch  7  loss 5.050  val m at u=1% 0.080  val percentile 0.718
+  procedures epoch  8  loss 4.910  val m at u=1% 0.083  val percentile 0.714
+  procedures epoch  9  loss 4.817  val m at u=1% 0.087  val percentile 0.710
+  procedures epoch 10  loss 4.780  val m at u=1% 0.086  val percentile 0.707
+  procedures epoch 11  loss 4.690  val m at u=1% 0.086  val percentile 0.702
+  procedures epoch 12  loss 4.486  val m at u=1% 0.089  val percentile 0.694
+  procedures epoch 13  loss 4.510  val m at u=1% 0.083  val percentile 0.694
+  procedures epoch 14  loss 4.554  val m at u=1% 0.097  val percentile 0.688
+  procedures epoch 15  loss 4.403  val m at u=1% 0.095  val percentile 0.686
+  procedures epoch 16  loss 4.187  val m at u=1% 0.105  val percentile 0.687
+  procedures epoch 17  loss 4.305  val m at u=1% 0.094  val percentile 0.681
+  procedures epoch 18  loss 4.170  val m at u=1% 0.092  val percentile 0.679
+  procedures epoch 19  loss 4.238  val m at u=1% 0.064  val percentile 0.671
+  procedures epoch 20  loss 4.146  val m at u=1% 0.083  val percentile 0.681
+  procedures epoch 21  loss 4.008  val m at u=1% 0.098  val percentile 0.673
+  procedures: best val m at u=1% 0.105, percentile 0.687
+
+[other] 1040 codes; training on 5820 fit pairs, 1455 validation pairs
+  other epoch  1  loss 5.462  val m at u=1% 0.078  val percentile 0.671
+  other epoch  2  loss 5.276  val m at u=1% 0.080  val percentile 0.687
+  other epoch  3  loss 5.215  val m at u=1% 0.085  val percentile 0.703
+  other epoch  4  loss 5.174  val m at u=1% 0.091  val percentile 0.704
+  other epoch  5  loss 5.082  val m at u=1% 0.095  val percentile 0.709
+  other epoch  6  loss 5.077  val m at u=1% 0.096  val percentile 0.707
+  other epoch  7  loss 5.024  val m at u=1% 0.096  val percentile 0.703
+  other epoch  8  loss 4.993  val m at u=1% 0.092  val percentile 0.698
+  other epoch  9  loss 4.927  val m at u=1% 0.098  val percentile 0.694
+  other epoch 10  loss 4.878  val m at u=1% 0.098  val percentile 0.691
+  other epoch 11  loss 4.811  val m at u=1% 0.099  val percentile 0.694
+  other epoch 12  loss 4.784  val m at u=1% 0.104  val percentile 0.689
+  other epoch 13  loss 4.745  val m at u=1% 0.096  val percentile 0.681
+  other epoch 14  loss 4.671  val m at u=1% 0.099  val percentile 0.690
+  other epoch 15  loss 4.705  val m at u=1% 0.103  val percentile 0.689
+  other epoch 16  loss 4.722  val m at u=1% 0.097  val percentile 0.680
+  other epoch 17  loss 4.719  val m at u=1% 0.087  val percentile 0.678
+  other: best val m at u=1% 0.104, percentile 0.689
+clinical tokens: all | FS clinical fields: ['diagnoses', 'medications', 'procedures', 'other'] | demographics: ncvr, pool changed (10,303 NCVR persons)
+
+===== V-cond: 252,213 candidate pairs, true pairs covered 1.0000 | S1 1785 records, S2 2294 records
+E2+P3 D      P 1.0000 R 0.9550 F1 0.9770 | S1 F1 1.0000 S2 F1 0.9511 | |A2| 144
+E2    D      P 0.9977 R 0.9550 F1 0.9759 | S1 F1 0.9994 S2 F1 0.9496
+E2+P3 D+C    P 1.0000 R 0.9648 F1 0.9821 | S1 F1 1.0000 S2 F1 0.9636 | |A2| 40
+E2    D+C    P 0.9994 R 0.9648 F1 0.9818 | S1 F1 1.0000 S2 F1 0.9630
+E2+P3 D+C+F  P 1.0000 R 0.9674 F1 0.9834 | S1 F1 0.9997 S2 F1 0.9671 | |A2| 37
+E2    D+C+F  P 0.9994 R 0.9674 F1 0.9831 | S1 F1 0.9997 S2 F1 0.9669
+E2+P3 D+E    P 1.0000 R 0.9742 F1 0.9869 | S1 F1 0.9997 S2 F1 0.9731 | |A2| 0
+E2    D+E    P 0.9994 R 0.9742 F1 0.9866 | S1 F1 0.9997 S2 F1 0.9727
+E2+P3 D+E+F  P 1.0000 R 0.9732 F1 0.9864 | S1 F1 0.9994 S2 F1 0.9734 | |A2| 0
+E2    D+E+F  P 0.9988 R 0.9732 F1 0.9858 | S1 F1 0.9994 S2 F1 0.9727
+E5+P3 D      P 1.0000 R 0.9872 F1 0.9936 | S1 F1 1.0000 S2 F1 0.9859 | |A2| 0
+E5    D      P 0.9966 R 0.9872 F1 0.9919 | S1 F1 0.9986 S2 F1 0.9839
+E5+P3 D+C    P 1.0000 R 0.9892 F1 0.9946 | S1 F1 1.0000 S2 F1 0.9881 | |A2| 0
+E5    D+C    P 0.9994 R 0.9892 F1 0.9943 | S1 F1 1.0000 S2 F1 0.9879
+E5+P3 D+C+F  P 1.0000 R 0.9892 F1 0.9946 | S1 F1 1.0000 S2 F1 0.9883 | |A2| 0
+E5    D+C+F  P 0.9994 R 0.9892 F1 0.9943 | S1 F1 1.0000 S2 F1 0.9881
+E5+P3 D+E    P 1.0000 R 0.9892 F1 0.9946 | S1 F1 1.0000 S2 F1 0.9883 | |A2| 0
+E5    D+E    P 0.9990 R 0.9892 F1 0.9941 | S1 F1 0.9997 S2 F1 0.9879
+E5+P3 D+E+F  P 1.0000 R 0.9886 F1 0.9943 | S1 F1 1.0000 S2 F1 0.9881 | |A2| 0
+E5    D+E+F  P 0.9988 R 0.9886 F1 0.9937 | S1 F1 0.9992 S2 F1 0.9877
+ΔF1 E2+P3 D+C - D: +0.0051 [+0.0030, +0.0074] | in S2: +0.0126 [+0.0076, +0.0170]
+ΔF1 E2+P3 D+C+F - D: +0.0064 [+0.0040, +0.0089] | in S2: +0.0161 [+0.0106, +0.0219]
+ΔF1 E2+P3 D+E - D: +0.0099 [+0.0073, +0.0126] | in S2: +0.0221 [+0.0162, +0.0277]
+ΔF1 E2+P3 D+E+F - D: +0.0094 [+0.0066, +0.0125] | in S2: +0.0223 [+0.0166, +0.0284]
+ΔF1 E5+P3 D+C - D: +0.0010 [+0.0000, +0.0021] | in S2: +0.0022 [+0.0000, +0.0047]
+ΔF1 E5+P3 D+C+F - D: +0.0010 [+0.0000, +0.0020] | in S2: +0.0025 [+0.0004, +0.0047]
+ΔF1 E5+P3 D+E - D: +0.0010 [-0.0001, +0.0021] | in S2: +0.0025 [+0.0000, +0.0049]
+ΔF1 E5+P3 D+E+F - D: +0.0007 [-0.0003, +0.0018] | in S2: +0.0022 [-0.0002, +0.0045]
+ΔF1 E2 D+C - D: +0.0059 [+0.0034, +0.0083] | in S2: +0.0134 [+0.0088, +0.0185]
+ΔF1 E2 D+C+F - D: +0.0072 [+0.0042, +0.0101] | in S2: +0.0174 [+0.0120, +0.0233]
+ΔF1 E2 D+E - D: +0.0107 [+0.0082, +0.0134] | in S2: +0.0232 [+0.0173, +0.0291]
+ΔF1 E2 D+E+F - D: +0.0099 [+0.0069, +0.0129] | in S2: +0.0232 [+0.0168, +0.0300]
+ΔF1 E5 D+C - D: +0.0024 [+0.0011, +0.0038] | in S2: +0.0040 [+0.0013, +0.0065]
+ΔF1 E5 D+C+F - D: +0.0024 [+0.0011, +0.0036] | in S2: +0.0042 [+0.0020, +0.0066]
+ΔF1 E5 D+E - D: +0.0022 [+0.0007, +0.0037] | in S2: +0.0040 [+0.0011, +0.0069]
+ΔF1 E5 D+E+F - D: +0.0018 [+0.0004, +0.0032] | in S2: +0.0038 [+0.0009, +0.0069]
+
+===== V-indep: 241,688 candidate pairs, true pairs covered 0.9998 | S1 1766 records, S2 2307 records
+E2+P3 D      P 0.9996 R 0.9566 F1 0.9776 | S1 F1 0.9997 S2 F1 0.9524 | |A2| 257
+E2    D      P 0.9927 R 0.9570 F1 0.9745 | S1 F1 0.9969 S2 F1 0.9487
+E2+P3 D+C    P 1.0000 R 0.9666 F1 0.9830 | S1 F1 0.9997 S2 F1 0.9645 | |A2| 84
+E2    D+C    P 0.9981 R 0.9668 F1 0.9822 | S1 F1 0.9992 S2 F1 0.9635
+E2+P3 D+C+F  P 1.0000 R 0.9682 F1 0.9838 | S1 F1 0.9994 S2 F1 0.9669 | |A2| 39
+E2    D+C+F  P 0.9990 R 0.9686 F1 0.9835 | S1 F1 0.9992 S2 F1 0.9664
+E2+P3 D+E    P 1.0000 R 0.9756 F1 0.9876 | S1 F1 0.9994 S2 F1 0.9749 | |A2| 0
+E2    D+E    P 0.9990 R 0.9758 F1 0.9873 | S1 F1 0.9986 S2 F1 0.9747
+E2+P3 D+E+F  P 1.0000 R 0.9762 F1 0.9880 | S1 F1 0.9991 S2 F1 0.9756 | |A2| 0
+E2    D+E+F  P 0.9992 R 0.9766 F1 0.9878 | S1 F1 0.9989 S2 F1 0.9754
+E5+P3 D      P 1.0000 R 0.9794 F1 0.9896 | S1 F1 0.9997 S2 F1 0.9776 | |A2| 14
+E5    D      P 0.9943 R 0.9796 F1 0.9869 | S1 F1 0.9983 S2 F1 0.9742
+E5+P3 D+C    P 1.0000 R 0.9862 F1 0.9931 | S1 F1 0.9997 S2 F1 0.9853 | |A2| 0
+E5    D+C    P 0.9980 R 0.9864 F1 0.9922 | S1 F1 0.9992 S2 F1 0.9842
+E5+P3 D+C+F  P 1.0000 R 0.9866 F1 0.9933 | S1 F1 0.9997 S2 F1 0.9857 | |A2| 0
+E5    D+C+F  P 0.9976 R 0.9868 F1 0.9922 | S1 F1 0.9989 S2 F1 0.9844
+E5+P3 D+E    P 1.0000 R 0.9898 F1 0.9949 | S1 F1 0.9997 S2 F1 0.9893 | |A2| 0
+E5    D+E    P 0.9988 R 0.9900 F1 0.9944 | S1 F1 0.9997 S2 F1 0.9886
+E5+P3 D+E+F  P 1.0000 R 0.9896 F1 0.9948 | S1 F1 0.9997 S2 F1 0.9890 | |A2| 0
+E5    D+E+F  P 0.9986 R 0.9898 F1 0.9942 | S1 F1 0.9992 S2 F1 0.9884
+ΔF1 E2+P3 D+C - D: +0.0054 [+0.0032, +0.0075] | in S2: +0.0122 [+0.0077, +0.0172]
+ΔF1 E2+P3 D+C+F - D: +0.0062 [+0.0035, +0.0089] | in S2: +0.0145 [+0.0093, +0.0201]
+ΔF1 E2+P3 D+E - D: +0.0100 [+0.0077, +0.0126] | in S2: +0.0225 [+0.0172, +0.0276]
+ΔF1 E2+P3 D+E+F - D: +0.0103 [+0.0075, +0.0131] | in S2: +0.0232 [+0.0173, +0.0289]
+ΔF1 E5+P3 D+C - D: +0.0035 [+0.0019, +0.0050] | in S2: +0.0076 [+0.0043, +0.0110]
+ΔF1 E5+P3 D+C+F - D: +0.0037 [+0.0021, +0.0053] | in S2: +0.0081 [+0.0049, +0.0115]
+ΔF1 E5+P3 D+E - D: +0.0053 [+0.0037, +0.0069] | in S2: +0.0116 [+0.0085, +0.0151]
+ΔF1 E5+P3 D+E+F - D: +0.0052 [+0.0035, +0.0067] | in S2: +0.0114 [+0.0080, +0.0153]
+ΔF1 E2 D+C - D: +0.0077 [+0.0054, +0.0101] | in S2: +0.0147 [+0.0096, +0.0196]
+ΔF1 E2 D+C+F - D: +0.0090 [+0.0064, +0.0119] | in S2: +0.0177 [+0.0125, +0.0234]
+ΔF1 E2 D+E - D: +0.0127 [+0.0101, +0.0152] | in S2: +0.0260 [+0.0204, +0.0321]
+ΔF1 E2 D+E+F - D: +0.0132 [+0.0102, +0.0162] | in S2: +0.0266 [+0.0207, +0.0332]
+ΔF1 E5 D+C - D: +0.0053 [+0.0034, +0.0072] | in S2: +0.0100 [+0.0060, +0.0140]
+ΔF1 E5 D+C+F - D: +0.0053 [+0.0034, +0.0073] | in S2: +0.0102 [+0.0066, +0.0145]
+ΔF1 E5 D+E - D: +0.0075 [+0.0055, +0.0094] | in S2: +0.0144 [+0.0104, +0.0187]
+ΔF1 E5 D+E+F - D: +0.0073 [+0.0053, +0.0094] | in S2: +0.0142 [+0.0102, +0.0183]

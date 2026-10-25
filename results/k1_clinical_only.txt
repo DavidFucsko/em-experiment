@@ -1,0 +1,19 @@
+12,275 patients; no demographic field is used for scoring
+
+codes        prefilter      true pair passes candidates |  top-1  top-5 (all patients) |  top-1  top-5 (among passing)
+diagnoses    none                      1.000      12275 |  0.328  0.482                  |  0.328  0.482
+diagnoses    gender                    1.000       6153 |  0.370  0.526                  |  0.370  0.526
+diagnoses    gender + race             0.955       2690 |  0.458  0.604                  |  0.480  0.632
+diagnoses    MedLink-style             0.870        435 |  0.556  0.677                  |  0.639  0.778
+medications  none                      1.000      12275 |  0.342  0.399                  |  0.342  0.399
+medications  gender                    1.000       6153 |  0.360  0.417                  |  0.360  0.417
+medications  gender + race             0.955       2690 |  0.397  0.465                  |  0.416  0.487
+medications  MedLink-style             0.870        435 |  0.450  0.531                  |  0.517  0.610
+procedures   none                      1.000      12275 |  0.007  0.017                  |  0.007  0.017
+procedures   gender                    1.000       6153 |  0.010  0.025                  |  0.010  0.025
+procedures   gender + race             0.955       2690 |  0.030  0.073                  |  0.032  0.077
+procedures   MedLink-style             0.870        435 |  0.105  0.204                  |  0.121  0.235
+all          none                      1.000      12275 |  0.463  0.573                  |  0.463  0.573
+all          gender                    1.000       6153 |  0.494  0.605                  |  0.494  0.605
+all          gender + race             0.955       2690 |  0.554  0.666                  |  0.580  0.698
+all          MedLink-style             0.870        435 |  0.621  0.714                  |  0.713  0.821

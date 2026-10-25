@@ -1,0 +1,56 @@
+ppmi: 14232 tokens, 14208729 co-occurring pairs
+ppmi: mean cosine of random diagnosis-code pairs 0.079 raw, 0.004 after centring + top-3 removal; using raw vectors.
+Embedding vocabulary covers 98.1% of test index-admission dx tokens (tokens seen in < 3 training patients have no vector).
+
+Test true pairs with dx codes on both sides: 5000; sharing no exact dx code: 739 (14.8%); sharing not even a 3-character dx category: 689 (13.8%).
+
+All test pairs with dx on both sides (n = 5000):
+  exact dx IDF cosine        mean percentile 0.841   top-1 0.385   top-50 0.726   m at u=10%: 0.803 (m/u 8.0)   m at u=1%: 0.683 (m/u 68.3)
+  3-character dx cosine      mean percentile 0.847   top-1 0.328   top-50 0.686   m at u=10%: 0.793 (m/u 7.9)   m at u=1%: 0.623 (m/u 62.3)
+  ppmi dx cosine (mean)      mean percentile 0.870   top-1 0.124   top-50 0.465   m at u=10%: 0.594 (m/u 5.9)   m at u=1%: 0.313 (m/u 31.3)
+  soft cosine, ICD-9->10     mean percentile 0.870   top-1 0.381   top-50 0.731   m at u=10%: 0.822 (m/u 8.2)   m at u=1%: 0.691 (m/u 69.1)
+  soft cosine, all >= 0.9    mean percentile 0.839   top-1 0.293   top-50 0.645   m at u=10%: 0.772 (m/u 7.7)   m at u=1%: 0.457 (m/u 45.7)
+
+True pairs with NO shared exact dx code (n = 739):
+  exact dx IDF cosine        mean percentile 0.000   top-1 0.000   top-50 0.000   m at u=10%: 0.000 (m/u 0.0)   m at u=1%: 0.000 (m/u 0.0)
+  3-character dx cosine      mean percentile 0.060   top-1 0.000   top-50 0.022   m at u=10%: 0.026 (m/u 0.3)   m at u=1%: 0.007 (m/u 0.7)
+  ppmi dx cosine (mean)      mean percentile 0.527   top-1 0.000   top-50 0.026   m at u=10%: 0.003 (m/u 0.0)   m at u=1%: 0.000 (m/u 0.0)
+  soft cosine, ICD-9->10     mean percentile 0.185   top-1 0.003   top-50 0.031   m at u=10%: 0.126 (m/u 1.3)   m at u=1%: 0.020 (m/u 2.0)
+  soft cosine, all >= 0.9    mean percentile 0.034   top-1 0.001   top-50 0.014   m at u=10%: 0.015 (m/u 0.1)   m at u=1%: 0.005 (m/u 0.5)
+
+True pairs with NO shared 3-character dx category (n = 689):
+  exact dx IDF cosine        mean percentile 0.000   top-1 0.000   top-50 0.000   m at u=10%: 0.000 (m/u 0.0)   m at u=1%: 0.000 (m/u 0.0)
+  3-character dx cosine      mean percentile 0.000   top-1 0.000   top-50 0.000   m at u=10%: 0.000 (m/u 0.0)   m at u=1%: 0.000 (m/u 0.0)
+  ppmi dx cosine (mean)      mean percentile 0.507   top-1 0.000   top-50 0.012   m at u=10%: 0.001 (m/u 0.0)   m at u=1%: 0.000 (m/u 0.0)
+  soft cosine, ICD-9->10     mean percentile 0.194   top-1 0.003   top-50 0.033   m at u=10%: 0.129 (m/u 1.3)   m at u=1%: 0.020 (m/u 2.0)
+  soft cosine, all >= 0.9    mean percentile 0.020   top-1 0.001   top-50 0.009   m at u=10%: 0.009 (m/u 0.1)   m at u=1%: 0.003 (m/u 0.3)
+
+Best-matching history code for each new index code (pairs with no shared exact dx): median cosine 0.161 for the true patient vs 0.123 for a random patient.
+
+Most frequent different-category code pairs linked by the embedding (>= 10 test patients, no shared exact dx code, not the same 3-character category):
+ patients   cosine    version                                                 history_code                                                   index_code
+      171 0.131426 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)                  dx10_I10 (Essential (primary) hypertension)
+      112 0.094387 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)        dx10_Z87891 (Personal history of nicotine dependence)
+       97 0.114578 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)                      dx10_E785 (Hyperlipidemia, unspecified)
+       76 0.113307 dx9_->dx10                dx9_4019 (Unspecified essential hypertension) dx10_K219 (Gastro-esophageal reflux disease without esophagi
+       68 0.125115 dx9_->dx10 dx9_25000 (Diabetes mellitus without mention of complication                      dx10_E785 (Hyperlipidemia, unspecified)
+       60 0.176161 dx9_->dx10               dx9_2449 (Unspecified acquired hypothyroidism)                      dx10_E039 (Hypothyroidism, unspecified)
+       55 0.199080 dx9_->dx10        dx9_V5861 (Long-term (current) use of anticoagulants)       dx10_Z7901 (Long term (current) use of anticoagulants)
+       54 0.170599 dx9_->dx10                              dx9_42731 (Atrial fibrillation)                 dx10_I4891 (Unspecified atrial fibrillation)
+       48 0.107155 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)                dx10_N179 (Acute kidney failure, unspecified)
+       46 0.130979 dx9_->dx10                 dx9_5849 (Acute kidney failure, unspecified)                dx10_N179 (Acute kidney failure, unspecified)
+       45 0.295774 dx9_->dx10 dx9_25000 (Diabetes mellitus without mention of complication   dx10_E119 (Type 2 diabetes mellitus without complications)
+       42 0.193015 dx9_->dx10 dx9_V4582 (Percutaneous transluminal coronary angioplasty st dx10_I2510 (Atherosclerotic heart disease of native coronary
+       37 0.382591 dx9_->dx10               dx9_V5867 (Long-term (current) use of insulin)               dx10_Z794 (Long term (current) use of insulin)
+       30 0.252155 dx9_->dx10       dx9_32723 (Obstructive sleep apnea (adult)(pediatric))     dx10_G4733 (Obstructive sleep apnea (adult) (pediatric))
+       30 0.471523 dx9_->dx10            dx9_49390 (Asthma, unspecified type, unspecified)              dx10_J45909 (Unspecified asthma, uncomplicated)
+       28 0.273641 dx9_->dx10                              dx9_3051 (Tobacco use disorder) dx10_F17210 (Nicotine dependence, cigarettes, uncomplicated)
+       27 0.239654 dx9_->dx10 dx9_496 (Chronic airway obstruction, not elsewhere classifie dx10_J449 (Chronic obstructive pulmonary disease, unspecifie
+       25 0.110191 dx9_->dx10      dx9_311 (Depressive disorder, not elsewhere classified) dx10_F329 (Major depressive disorder, single episode, unspec
+       25 0.095961 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)                              dx10_D649 (Anemia, unspecified)
+       25 0.294194 dx9_->dx10                                 dx9_2749 (Gout, unspecified)                                dx10_M109 (Gout, unspecified)
+       23 0.090232 dx9_->dx10              dx9_2724 (Other and unspecified hyperlipidemia)                      dx10_E785 (Hyperlipidemia, unspecified)
+       22 0.178382 dx9_->dx10 dx9_25000 (Diabetes mellitus without mention of complication dx10_I129 (Hypertensive chronic kidney disease with stage 1 
+       22 0.114820 dx9_->dx10                       dx9_30000 (Anxiety state, unspecified)                    dx10_F419 (Anxiety disorder, unspecified)
+       22 0.077707 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)      dx10_N390 (Urinary tract infection, site not specified)
+       22 0.103982 dx9_->dx10                dx9_4019 (Unspecified essential hypertension)                 dx10_I4891 (Unspecified atrial fibrillation)
